@@ -101,7 +101,7 @@ class TemplateConfig {
     }
 
     let eleventyConfigApiMergingObject = eleventyConfig.getMergingConfigObject();
-    localConfig = lodashMerge(localConfig, eleventyConfigApiMergingObject);
+    localConfig = lodashMerge(eleventyConfigApiMergingObject, localConfig);
 
     // blow away any templateFormats set in config return object and prefer those set in config API.
     for (let localConfigKey of overrides) {
